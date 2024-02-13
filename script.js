@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWlkYW5hcm1zdHJvbmciLCJhIjoiY2xzam1tczhoMnJqMzJpbzZ4OWh0bmI4dyJ9.2pEogvW_3XlwcsMh4kMfCQ'; //Add default public map token from your Mapbox account
 const map = new mapboxgl.Map({
     container: 'my-map', // map container ID
-    style: 'mapbox://styles/mapbox/dark-v11', // style URL
+    style: 'mapbox://styles/mapbox/dark-v9', // style URL
     center: [-79.384, 43.713], // starting position [lng, lat]
     zoom: 9 // starting zoom
 });
@@ -10,8 +10,7 @@ map.on('load', () => {
    
     map.addSource('parks', {
     type: 'geojson',
-    // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
-    // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+    // Point to GeoJSON data
     data: 'https://github.com/Adnarmstrng/lab2/main/parks.geojson',
     cluster: true,
     clusterMaxZoom: 14, // Max zoom to cluster points on
